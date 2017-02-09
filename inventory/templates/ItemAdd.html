@@ -11,7 +11,7 @@
     Please correct the error {{ form.errors|pluralize }} below.
 </p>
 {% endif %}
-<form action="/AddItem/">
+<form action="/AddItem/" method="post">
 {% csrf_token %}
 <table>
     {{ form.as_table }}
