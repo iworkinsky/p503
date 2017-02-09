@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Add in Stock Bill</h1>
+{% if form.errors %}
+<p style="color:red">
+    Please correct the error{{ form.errors|pluralize }} below.
+</p>
+{% endif %}
+<form action="/AddInStockBill/" method="post">
+    {% csrf_token %}
+<table>
+        {{ form.as_table}}
+</table>
+    <input type="submit" value="提交">
+</form>
+</body>
+</html>
