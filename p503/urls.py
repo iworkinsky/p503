@@ -21,5 +21,7 @@ urlpatterns = [
     url(r'addinstock/$',views.AddInStockBill),
     url(r'AddInStockBill/$', views.AddInStockBill),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'additem/$',views.AddItem),
+    url(r'AddItem/$', views.AddItem),
 
 ]
